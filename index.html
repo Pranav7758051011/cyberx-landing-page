@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CYBERX — The Future is Hybrid. A cybernetic evolution platform merging human intelligence with machine precision.">
+    <title>CYBERX | The Future is Hybrid</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- LOADING SCREEN                -->
+    <!-- ============================= -->
+    <div class="loader" id="loader">
+        <div class="loader-core">
+            <span></span><span></span><span></span>
+        </div>
+        <p class="loader-text">INITIALIZING<span class="dots">...</span></p>
+    </div>
+
+    <!-- ============================= -->
+    <!-- CURSOR GLOW (desktop only)     -->
+    <!-- ============================= -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ============================= -->
+    <!-- PROGRESS BAR (scroll)          -->
+    <!-- ============================= -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                         -->
+    <!-- ============================= -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">CYBER<span>X</span></a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#features" class="nav-link" data-section="features">Features</a></li>
+            <li><a href="#timeline" class="nav-link" data-section="timeline">Evolution</a></li>
+            <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+            <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="btn-nav">
+            <span>Join Now</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ============================= -->
+    <!-- HERO SECTION                   -->
+    <!-- ============================= -->
+    <section class="hero" id="home">
+
+        <!-- Animated background layers -->
+        <div class="hero-bg">
+            <div class="grid-plane"></div>
+            <div class="glow-orb orb-cyan"></div>
+            <div class="glow-orb orb-violet"></div>
+            <div class="glow-orb orb-pink"></div>
+            <div class="scan-line"></div>
+        </div>
+
+        <div class="hero-container">
+
+            <div class="hero-content" data-reveal>
+
+                <div class="ai-badge">
+                    <span class="badge-dot"></span>
+                    AI-POWERED CYBERNETIC PLATFORM
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <p class="eyebrow">CYBERNETIC EVOLUTION // GEN-7</p>
+
+                <h1 class="hero-title">
+                    THE FUTURE IS
+                    <span class="gradient-text glitch" data-text="NOT HUMAN">NOT HUMAN</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover the next generation of cybernetic technology where artificial
+                    intelligence meets human evolution — engineered for those who refuse
+                    to stay ordinary.
+                </p>
+
+                <div class="buttons">
+                    <a href="#features" class="btn-primary ripple">
+                        <span>Explore CyberX</span>
+                        <i class="fa-solid fa-bolt"></i>
+                    </a>
+                    <a href="#about" class="btn-secondary ripple">
+                        <span>Learn More</span>
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <i class="fa-solid fa-signal"></i>
+                        <span>Neural Sync <strong>98.4%</strong></span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-circle meta-online"></i>
+                        <span>System <strong>Online</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-reveal>
+
+                <!-- Orbit rings -->
+                <div class="orbit-ring ring-1"></div>
+                <div class="orbit-ring ring-2"></div>
+                <div class="orbit-ring ring-3"></div>
+
+                <!-- Signature element: animated neural-core cyborg figure (SVG) -->
+                <div class="neural-core" id="neuralCore">
+                    <svg viewBox="0 0 400 560" xmlns="http://www.w3.org/2000/svg" class="core-svg">
+                        <defs>
+                            <linearGradient id="coreGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#00F5FF"/>
+                                <stop offset="55%" stop-color="#7B2FF7"/>
+                                <stop offset="100%" stop-color="#FF2E63"/>
+                            </linearGradient>
+                            <filter id="glowFilter" x="-60%" y="-60%" width="220%" height="220%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge>
+                                    <feMergeNode in="blur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Silhouette wireframe -->
+                        <g class="figure" fill="none" stroke="url(#coreGrad)" stroke-width="1.4" filter="url(#glowFilter)" opacity="0.9">
+                            <!-- head -->
+                            <path d="M170 60 Q200 20 230 60 Q245 100 230 140 Q200 165 170 140 Q155 100 170 60 Z"/>
+                            <circle cx="200" cy="95" r="4" class="core-node"/>
+                            <!-- neck / shoulders -->
+                            <path d="M180 150 L180 175 Q120 190 100 250 L95 340"/>
+                            <path d="M220 150 L220 175 Q280 190 300 250 L305 340"/>
+                            <!-- spine -->
+                            <path class="spine-path" d="M200 165 L200 400"/>
+                            <!-- torso panel lines -->
+                            <path d="M140 220 L260 220 M135 270 L265 270 M140 320 L260 320"/>
+                            <path d="M160 190 L160 380 M240 190 L240 380"/>
+                            <!-- arms -->
+                            <path d="M100 250 L80 330 L85 400"/>
+                            <path d="M300 250 L320 330 L315 400"/>
+                            <!-- pelvis / legs -->
+                            <path d="M160 400 L140 480 L135 545"/>
+                            <path d="M240 400 L260 480 L265 545"/>
+                            <path d="M160 400 L240 400"/>
+                            <!-- nodes -->
+                            <circle cx="200" cy="270" r="6" class="core-node core-pulse"/>
+                            <circle cx="85" cy="400" r="3" class="core-node"/>
+                            <circle cx="315" cy="400" r="3" class="core-node"/>
+                            <circle cx="135" cy="545" r="3" class="core-node"/>
+                            <circle cx="265" cy="545" r="3" class="core-node"/>
+                        </g>
+
+                        <!-- floating particles -->
+                        <g class="particles" fill="#00F5FF">
+                            <circle cx="90" cy="180" r="2"/>
+                            <circle cx="320" cy="200" r="2.5"/>
+                            <circle cx="110" cy="420" r="2"/>
+                            <circle cx="290" cy="460" r="1.8"/>
+                            <circle cx="200" cy="30" r="2"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Floating tech cards -->
+                <div class="tech-card card-1" data-float>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <div>
+                        <span class="card-label">Vital Sync</span>
+                        <span class="card-value">Stable</span>
+                    </div>
+                </div>
+
+                <div class="tech-card card-2" data-float>
+                    <i class="fa-solid fa-wave-square"></i>
+                    <div>
+                        <span class="card-label">Neural Load</span>
+                        <span class="card-value">62%</span>
+                    </div>
+                    <div class="mini-bar"><span style="width:62%"></span></div>
+                </div>
+
+                <div class="tech-card card-3" data-float>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <span class="card-label">Encryption</span>
+                        <span class="card-value">AES-512</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll down">
+            <span>SCROLL</span>
+            <div class="mouse"><div class="wheel"></div></div>
+        </a>
+    </section>
+
+    <!-- ============================= -->
+    <!-- ABOUT SECTION                  -->
+    <!-- ============================= -->
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <div class="about-image" data-reveal>
+                <div class="about-frame">
+                    <svg viewBox="0 0 300 340" class="about-svg">
+                        <defs>
+                            <linearGradient id="aboutGrad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#7B2FF7"/>
+                                <stop offset="100%" stop-color="#00F5FF"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="10" y="10" width="280" height="320" rx="18" fill="none" stroke="url(#aboutGrad)" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="150" cy="140" r="70" fill="none" stroke="url(#aboutGrad)" stroke-width="1.2" class="rotate-slow"/>
+                        <circle cx="150" cy="140" r="46" fill="none" stroke="#00F5FF" stroke-width="1" opacity="0.5" class="rotate-slow-rev"/>
+                        <path d="M150 90 L150 190 M110 140 L190 140" stroke="url(#aboutGrad)" stroke-width="1"/>
+                        <circle cx="150" cy="140" r="6" fill="#00F5FF" class="core-pulse"/>
+                        <text x="150" y="260" text-anchor="middle" class="about-svg-text">GEN-7 CORE</text>
+                        <text x="150" y="280" text-anchor="middle" class="about-svg-sub">SYSTEM ARCHITECTURE</text>
+                    </svg>
+                </div>
+                <div class="stat-badge badge-top">
+                    <strong>250K+</strong>
+                    <span>Enhanced Users</span>
+                </div>
+                <div class="stat-badge badge-bottom">
+                    <strong>99.2%</strong>
+                    <span>AI Precision</span>
+                </div>
+            </div>
+
+            <div class="about-content" data-reveal>
+                <p class="eyebrow">WHO WE ARE</p>
+                <h2>Where Biology Meets <span class="gradient-text">Machine Precision</span></h2>
+
+                <div class="glass-card about-card">
+                    <p>
+                        CyberX is a vision of human evolution powered by artificial intelligence
+                        and cybernetic enhancement. We merge human intelligence with machine
+                        precision to design the next generation of augmented beings.
+                    </p>
+                    <p>
+                        Every system we build is engineered around one principle: intelligence
+                        should have no ceiling, and the body should have no limits.
+                    </p>
+                </div>
+
+                <div class="about-features">
+                    <div class="mini-feature">
+                        <i class="fa-solid fa-check"></i>
+                        Adaptive neural interfaces
+                    </div>
+                    <div class="mini-feature">
+                        <i class="fa-solid fa-check"></i>
+                        Real-time biometric fusion
+                    </div>
+                    <div class="mini-feature">
+                        <i class="fa-solid fa-check"></i>
+                        Quantum-secured architecture
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn-primary ripple">
+                    <span>Discover More</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FEATURES SECTION               -->
+    <!-- ============================= -->
+    <section class="features" id="features">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">CAPABILITIES</p>
+            <h2 class="section-title">Engineered For <span class="gradient-text">Evolution</span></h2>
+            <p class="section-sub">Core systems that power every CyberX enhancement, built for precision, speed and total integration.</p>
+        </div>
+
+        <div class="features-container">
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>Neural Intelligence</h3>
+                <p>Advanced AI systems that simulate human thinking and real-time decision making.</p>
+                <span class="feature-index">01</span>
+            </div>
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3>Cyber Robotics</h3>
+                <p>Next-gen robotic enhancements integrated seamlessly with human motion systems.</p>
+                <span class="feature-index">02</span>
+            </div>
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
+                <h3>AI Vision</h3>
+                <p>Enhanced visual systems powered by machine learning and deep perception layers.</p>
+                <span class="feature-index">03</span>
+            </div>
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Quantum Security</h3>
+                <p>Unbreakable encryption and defense systems powered by quantum-grade technology.</p>
+                <span class="feature-index">04</span>
+            </div>
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>Bio-Signal Fusion</h3>
+                <p>Real-time biometric synchronization between neural pathways and cyber systems.</p>
+                <span class="feature-index">05</span>
+            </div>
+
+            <div class="feature-card" data-reveal>
+                <div class="feature-glow"></div>
+                <div class="feature-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3>Global Uplink</h3>
+                <p>Instant cross-network connectivity linking every enhanced unit worldwide.</p>
+                <span class="feature-index">06</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- STATISTICS SECTION             -->
+    <!-- ============================= -->
+    <section class="stats" id="stats">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">GLOBAL IMPACT</p>
+            <h2 class="section-title">Numbers That <span class="gradient-text">Define Us</span></h2>
+        </div>
+
+        <div class="stats-container">
+
+            <div class="stat-box" data-reveal>
+                <div class="stat-box-head">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="stat-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 12%</span>
+                </div>
+                <h3 class="counter" data-target="250000">0</h3>
+                <p>Users Enhanced</p>
+                <div class="stat-line"></div>
+            </div>
+
+            <div class="stat-box" data-reveal>
+                <div class="stat-box-head">
+                    <i class="fa-solid fa-brain"></i>
+                    <span class="stat-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 4%</span>
+                </div>
+                <h3><span class="counter" data-target="99">0</span>%</h3>
+                <p>AI Accuracy</p>
+                <div class="stat-line"></div>
+            </div>
+
+            <div class="stat-box" data-reveal>
+                <div class="stat-box-head">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span class="stat-trend up"><i class="fa-solid fa-arrow-trend-up"></i> 8%</span>
+                </div>
+                <h3 class="counter" data-target="150">0</h3>
+                <p>Countries Reached</p>
+                <div class="stat-line"></div>
+            </div>
+
+            <div class="stat-box" data-reveal>
+                <div class="stat-box-head">
+                    <i class="fa-solid fa-headset"></i>
+                    <span class="stat-trend steady"><i class="fa-solid fa-minus"></i> 0%</span>
+                </div>
+                <h3><span class="counter" data-target="24">0</span>/7</h3>
+                <p>Support Hours</p>
+                <div class="stat-line"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TIMELINE SECTION                -->
+    <!-- ============================= -->
+    <section class="timeline" id="timeline">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">THE JOURNEY</p>
+            <h2 class="section-title">Evolution <span class="gradient-text">Path</span></h2>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"><span class="timeline-progress"></span></div>
+
+            <div class="timeline-item left" data-reveal>
+                <div class="timeline-card">
+                    <span class="timeline-year">Phase 01</span>
+                    <h3>Human Era</h3>
+                    <p>Natural biological intelligence and physical ability define the limits of existence.</p>
+                </div>
+                <div class="dot"><span></span></div>
+            </div>
+
+            <div class="timeline-item right" data-reveal>
+                <div class="timeline-card">
+                    <span class="timeline-year">Phase 02</span>
+                    <h3>AI Integration</h3>
+                    <p>Humans begin merging with artificial intelligence systems for the first time.</p>
+                </div>
+                <div class="dot"><span></span></div>
+            </div>
+
+            <div class="timeline-item left" data-reveal>
+                <div class="timeline-card">
+                    <span class="timeline-year">Phase 03</span>
+                    <h3>Cybernetic Enhancement</h3>
+                    <p>Mechanical upgrades enhance strength, vision and cognitive processing power.</p>
+                </div>
+                <div class="dot"><span></span></div>
+            </div>
+
+            <div class="timeline-item right" data-reveal>
+                <div class="timeline-card">
+                    <span class="timeline-year">Phase 04</span>
+                    <h3>Cyborg Evolution</h3>
+                    <p>Full integration of human consciousness with machine intelligence is achieved.</p>
+                </div>
+                <div class="dot"><span></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- GALLERY SECTION                 -->
+    <!-- ============================= -->
+    <section class="gallery" id="gallery">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">VISUAL ARCHIVE</p>
+            <h2 class="section-title">Cyber <span class="gradient-text">Gallery</span></h2>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-item mesh-1" data-reveal>
+                <img src="assets/images/gallery1.png" alt="Neural Interface" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-diagram-project gallery-icon"></i>
+                    <span class="gallery-caption">Neural Interface</span>
+                </div>
+            </div>
+
+            <div class="gallery-item mesh-2" data-reveal>
+                <img src="assets/images/gallery2.png" alt="Quantum Core" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-atom gallery-icon"></i>
+                    <span class="gallery-caption">Quantum Core</span>
+                </div>
+            </div>
+
+            <div class="gallery-item mesh-3" data-reveal>
+                <img src="assets/images/gallery3.png" alt="Cyber City" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-city gallery-icon"></i>
+                    <span class="gallery-caption">Cyber City</span>
+                </div>
+            </div>
+
+            <div class="gallery-item mesh-4" data-reveal>
+                <img src="assets/images/gallery4.png" alt="AI Vision" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-eye gallery-icon"></i>
+                    <span class="gallery-caption">AI Vision</span>
+                </div>
+            </div>
+
+            <div class="gallery-item mesh-5" data-reveal>
+                <img src="assets/images/gallery5.png" alt="Bio-Mech Lab" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-flask gallery-icon"></i>
+                    <span class="gallery-caption">Bio-Mech Lab</span>
+                </div>
+            </div>
+
+            <div class="gallery-item mesh-6" data-reveal>
+                <img src="assets/images/gallery6.png" alt="Data Stream" onerror="this.style.display='none'">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-code-branch gallery-icon"></i>
+                    <span class="gallery-caption">Data Stream</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TESTIMONIALS SECTION            -->
+    <!-- ============================= -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">FROM THE COMMUNITY</p>
+            <h2 class="section-title">Voices Of <span class="gradient-text">Evolution</span></h2>
+        </div>
+
+        <div class="testi-wrapper" data-reveal>
+            <button class="testi-arrow prev" id="testiPrev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div class="testi-container" id="testiContainer">
+
+                <div class="testi-card active">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"CyberX completely changed how I see human-AI integration. Truly futuristic engineering."</p>
+                    <div class="testi-profile">
+                        <div class="testi-avatar">AM</div>
+                        <div>
+                            <h4>Alex M.</h4>
+                            <span>Early Adopter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"The cybernetic concept and interface design is next-level. Loved every second of it."</p>
+                    <div class="testi-profile">
+                        <div class="testi-avatar">SK</div>
+                        <div>
+                            <h4>Sarah K.</h4>
+                            <span>Systems Engineer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Feels like a real product from the future. The most premium tech experience I've used."</p>
+                    <div class="testi-profile">
+                        <div class="testi-avatar">DR</div>
+                        <div>
+                            <h4>Daniel R.</h4>
+                            <span>Product Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="testi-arrow next" id="testiNext" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="testi-dots" id="testiDots"></div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FAQ SECTION                     -->
+    <!-- ============================= -->
+    <section class="faq" id="faq">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">GOT QUESTIONS</p>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        </div>
+
+        <div class="faq-container" data-reveal>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> What is CyberX?</span>
+                    <i class="fa-solid fa-plus faq-toggle"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>CyberX is a futuristic concept platform showcasing human-AI cybernetic evolution through immersive interface design.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Is this real technology?</span>
+                    <i class="fa-solid fa-plus faq-toggle"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>It's a conceptual UI/UX design representing the future possibilities of AI, robotics and human augmentation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Is it responsive?</span>
+                    <i class="fa-solid fa-plus faq-toggle"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes — CyberX is fully responsive and optimized across desktop, laptop, tablet and mobile devices.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Can I use this project?</span>
+                    <i class="fa-solid fa-plus faq-toggle"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely — use it for your portfolio, academic submission, or as a learning reference for frontend development.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> What stack was this built with?</span>
+                    <i class="fa-solid fa-plus faq-toggle"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Pure HTML5, CSS3 and vanilla JavaScript — no frameworks — styled with Font Awesome icons and Google Fonts.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- CONTACT SECTION                 -->
+    <!-- ============================= -->
+    <section class="contact" id="contact">
+        <div class="section-head" data-reveal>
+            <p class="eyebrow center">GET IN TOUCH</p>
+            <h2 class="section-title">Contact <span class="gradient-text">CyberX</span></h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info glass-card" data-reveal>
+                <h3>Let's start the evolution</h3>
+                <p>Reach out for partnerships, demos, or just to talk about the future of human-AI systems.</p>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>contact@cyberx.io</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+1 (555) 010-2077</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Neo Sector 7, Global Grid</span>
+                </div>
+
+                <div class="map-placeholder">
+                    <div class="map-grid"></div>
+                    <i class="fa-solid fa-location-crosshairs map-pin"></i>
+                    <span class="map-label">HQ LOCATION</span>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form glass-card" data-reveal id="contactForm">
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="subject" placeholder=" ">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="5" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+
+                <button type="submit" class="btn-primary ripple full-width">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <p class="form-status" id="formStatus"></p>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FOOTER                           -->
+    <!-- ============================= -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">CYBER<span>X</span></a>
+                <p>Building the future of human-AI evolution — one enhancement at a time.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#faq">FAQ</a>
+                <a href="#timeline">Evolution</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <p class="footer-note">Get notified about new enhancements and releases.</p>
+                <form class="footer-subscribe" onsubmit="return false;">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 CyberX. All Rights Reserved.</p>
+            <p class="footer-tagline">THE FUTURE IS HYBRID</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
